@@ -12,7 +12,7 @@
     "contributes": {
         "snippets": [
             {
-                "language": "'blade'",
+                "language": "blade",
                 "path": "./snippets/blade.json"
             }
         ]
