@@ -1,10 +1,21 @@
-# saint-l README
+# saint L README
 
-This is the README for your extension "saint-l". After writing up a brief description, we recommend including the following sections.
+Laravel snippets for VS code (Visual Studio Code)
+
+> Originaly the snippets initialized with the "[Laravel Blade Snippets](https://github.com/onecentlin/laravel-blade-snippets-vscode)" and then I modified them.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Snippets (blade)
+
+## Future features
+
+- Format the code
+- highlight code
+- suggestion alternatives
+- PHP to blade convertor 
+  - `<?php ?>` to `@PHP @endphp`
+  - `if() { }` to `@if() @endif`
 
 For example if there is an image subfolder under your extension project workspace:
 
