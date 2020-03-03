@@ -1,0 +1,20 @@
+{
+    "name": "saint-l",
+    "displayName": "saint L",
+    "description": "Laravel and/or blade snippets",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "'blade'",
+                "path": "./snippets/blade.json"
+            }
+        ]
+    }
+}
