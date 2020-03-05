@@ -12,7 +12,11 @@
     "keywords": [
         "laravel",
         "blade",
-        "snippet"
+        "snippet",
+        "bla_de",
+        "bla de",
+        "bla bla bla",
+        "bla"
     ],
     "engines": {
         "vscode": "^1.42.0"
