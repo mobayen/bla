@@ -3,8 +3,8 @@
     "displayName": "bla_de (Laravel/Blade)",
     "description": "bla_de: Blade/Laravel snippets",
     "publisher": "saintMiM",
-    "version": "0.0.1",
-    "icon": "images/laravel-logo.png",
+    "version": "0.0.2",
+    "icon": "images/L-big.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/mobayen/bla/"
@@ -12,7 +12,11 @@
     "keywords": [
         "laravel",
         "blade",
+        "route",
         "snippet",
+        "laravel snippets",
+        "blade snippets",
+        "route snippets",
         "bla_de",
         "bla de",
         "bla bla bla",
@@ -29,6 +33,10 @@
             {
                 "language": "blade",
                 "path": "./snippets/blade.json"
+            },
+            {
+                "language": "php",
+                "path": "./snippets/route.json"
             }
         ]
     }

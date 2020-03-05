@@ -1,0 +1,63 @@
+{
+    // Controller
+
+    "Route Controller": {
+        "prefix": "Route /controller",
+        "body": [
+            "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:index}');",
+            "$0"
+        ],
+        "description": "Laravel/route: registers a route that respond to a HTTP verb:"
+    },
+    
+    "Route single resource": {
+        "prefix": "Route resource /controller",
+        "body": [
+            "Route::${1|resource,apiResource|}('${2:posts}', '${3:Post}Controller');",
+            "$0"
+        ],
+        "description": "Laravel/route: register a resourceful route or API route to the controller"
+    },
+    
+    "Route single resource only": {
+        "prefix": [
+            "Route resource only /controller",
+            "Route resource except /controller"
+        ],
+        "body": [
+            "Route::resource('${1:posts}', '${2:Post}Controller')->${3|only,except|}([",
+            "\t'${4:index}', '${5:show}'${6:, '${7:more}'}$0",
+            "]);",
+            ""
+        ],
+        "description": "Laravel/route: specify a subset of actions the controller should handle instead of the full set of default actions."
+    },
+
+    "Route multiple resources": {
+        "prefix": "Route resources /controller",
+        "body": [
+            "Route::${1|resources,apiResources|}([",
+            "\t'${1:photos}' => '${2:Photo}Controller',",
+            "\t'${3:posts}' => '${4:Post}Controller'",
+            "]);",
+            "$0"
+        ],
+        "description": "Laravel/route: register a resourceful route to the controller"
+    },
+    
+    "Route Match Controller": {
+        "prefix": "Route Match /controller",
+        "body": [
+            "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', '${6}Controller@${7:index}');"
+        ],
+        "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
+    },
+    
+    "Route Any Controller": {
+        "prefix": "Route Any /controller",
+        "body": [
+            "Route::any('${1:/}', '${2}Controller@${3:index}');"
+        ],
+        "description": "Laravel/route: registers a route that respond to GET HTTP verb:"
+    },
+}

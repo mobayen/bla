@@ -2,11 +2,22 @@
 
 Blade/Laravel snippets for VS code (Visual Studio Code)
 
+the most thing I have in mind is not adding custom string to the trigger string.
+
+> no: `b:bla-bla`
+> no: `blade:bla-bla`
+> yes: `@ bla-bla`
+
+the space after the `@` make the snippet work if the developer typs just `bla-bla` witought the `@`
+
 > Originaly the snippets initialized with the "[Laravel Blade Snippets](https://github.com/onecentlin/laravel-blade-snippets-vscode)" and then I modified them.
+
+caution: the trigger strings (prefixes) could change until I found the best option!
 
 ## Features
 
-- Snippets (blade)
+- Blade snippets
+- Route snippets
 - More comming...
 
 ## Future features
@@ -18,7 +29,9 @@ Blade/Laravel snippets for VS code (Visual Studio Code)
   - `<?php ?>` to `@PHP @endphp`
   - `if() { }` to `@if() @endif`
 
-![feature X](images/laravel-logo.png\)
+<p align="center">
+<img src="images/L-big.png" width="400">
+</p>
 
 ## Extension Settings
 
@@ -30,7 +43,7 @@ nothing yet!
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 - Updates the snippet prefixes
 One thing that was bothering me was, when I was in the middle of typing a directive (e.g.: `@ext...`) and the list of snippets shows up, and I pick one, I end up with two at-signs (`@@extends('name')`)! So the first change I've made was replace the `b:` with `@ `.
 So, now we can have a nice `(@extends('name'))` withought needing to go back and remove the extra `@`
@@ -51,21 +64,6 @@ To be added in the middle of other 'if' blocks
 
 - Removed:
   - ...
-  
 
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### 0.0.2
+- Route snippets have been added.
