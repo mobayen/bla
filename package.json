@@ -1,8 +1,19 @@
 {
-    "name": "saint-l",
-    "displayName": "saint L",
-    "description": "Laravel and/or blade snippets",
+    "name": "bla",
+    "displayName": "bla",
+    "description": "bla is Blade/Laravel snippets",
+    "publisher": "saintMiM",
     "version": "0.0.1",
+    "icon": "images/laravel-logo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mobayen/bla/"
+    },
+    "keywords": [
+        "laravel",
+        "blade",
+        "snippet"
+    ],
     "engines": {
         "vscode": "^1.42.0"
     },

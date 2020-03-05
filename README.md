@@ -1,12 +1,13 @@
-# saint L README
+# bla_de (Blade/Laravel)
 
-Laravel snippets for VS code (Visual Studio Code)
+Blade/Laravel snippets for VS code (Visual Studio Code)
 
 > Originaly the snippets initialized with the "[Laravel Blade Snippets](https://github.com/onecentlin/laravel-blade-snippets-vscode)" and then I modified them.
 
 ## Features
 
 - Snippets (blade)
+- More comming...
 
 ## Future features
 
@@ -17,30 +18,15 @@ Laravel snippets for VS code (Visual Studio Code)
   - `<?php ?>` to `@PHP @endphp`
   - `if() { }` to `@if() @endif`
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![feature X](images/laravel-logo.png\)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+nothing yet!
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+nothing yet!
 
 ## Release Notes
 
@@ -64,6 +50,7 @@ To be added in the middle of other 'if' blocks
 - Replaced almost every dashes '-' in the prefixes with a single space, since it is easier to hit the spacebar.
 
 - Removed:
+  - ...
   
 
 -----------------------------------------------------------------------------------------------------------
