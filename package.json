@@ -1,7 +1,7 @@
 {
     "name": "bla",
-    "displayName": "bla",
-    "description": "bla is Blade/Laravel snippets",
+    "displayName": "bla_de (Laravel/Blade)",
+    "description": "bla_de: Blade/Laravel snippets",
     "publisher": "saintMiM",
     "version": "0.0.1",
     "icon": "images/laravel-logo.png",
