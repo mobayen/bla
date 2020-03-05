@@ -44,19 +44,27 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
+- Updates the snippet prefixes
+One thing that was bothering me was, when I was in the middle of typing a directive (e.g.: `@ext...`) and the list of snippets shows up, and I pick one, I end up with two at-signs (`@@extends('name')`)! So the first change I've made was replace the `b:` with `@ `.
+So, now we can have a nice `(@extends('name'))` withought needing to go back and remove the extra `@`
 
-Initial release of ...
+- There are `@` for non-atsign-directives as well for the sake of predictablity and staying united!
 
-### 1.0.1
+- Added 
+  - 'else if line' snippet
+To be added in the middle of other 'if' blocks
+  - 'if is method': adds an 'if' block initialized with an 'isMethod()' 
 
-Fixed issue #.
+- Renamed
+  - "b:echo" => "b: mustache Esc"
+  - "b:echo-html" => "b: mustache UnEsc"
+  - "b:loop-first" & "b:loop-last" merged "@ if $loop"
+  - 
+- Replaced almost every dashes '-' in the prefixes with a single space, since it is easier to hit the spacebar.
 
-### 1.1.0
-
-Added features X, Y, and Z.
+- Removed:
+  
 
 -----------------------------------------------------------------------------------------------------------
 
