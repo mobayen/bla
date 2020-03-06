@@ -65,6 +65,8 @@ To be added in the middle of other 'if' blocks
 - Route snippets have been added.
 
 - Route snippets have been added.
+  - Routes accepts `Controller@action` pattern
+  - Routes accepts a closure
 
 - Removed:
   - ...

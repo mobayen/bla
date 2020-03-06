@@ -1,48 +1,56 @@
 {
-    // Controller
-
     "Route Controller": {
-        "prefix": "Rt:Ctrl / Route controller / Route::get / Route::post / Route::put / Route::patch / Route::delete / Route::options",
+        "prefix": "Rt:Ctrl@actn / Route controller / Route::get / Route::post / Route::put / Route::patch / Route::delete / Route::options",
         "body": [
-            "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:index}');",
+            "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:${5|index,create,store,show,edit,update,destroy|}}');",
             "$0"
         ],
-        "description": "Laravel/route: registers a route that respond to a HTTP verb: (get, post, put, patch, delete, options)"
+        "description": "Laravel/route: Controller@action / respond to an HTTP verb (get, post, put, patch, delete, options)"
+    },
+
+    "Route Closure": {
+        "prefix": "Rt:Fn / Route Function / Route controller / Route::get / Route::post / Route::put / Route::patch / Route::delete / Route::options",
+        "body": [
+            "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', function () {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Laravel/route: Accepts a URI and a Closure. respond to an HTTP verb (get, post, put, patch, delete, options)"
     },
     
     "Route single resource": {
         "prefix": "Rt:Rsrc / Route resource apiResource / Route::resource / Route::apiResource",
         "body": [
-            "Route::${1|resource,apiResource|}('${2:posts}', '${3:Post}Controller');",
+            "Route::${1|resource,apiResource|}('$2', '$3Controller');",
             "$0"
         ],
-        "description": "Laravel/route: register a resourceful route or API route to the controller"
+        "description": "Laravel/route(API): register a resourceful route or API route to a controller"
     },
-    
+
     "Route single resource only": {
         "prefix": [
             "Rt:Rsrc:only / Route Resource Only / Route::Resource",
             "Rt:Rsrc:excpt / Route Resource Except / Route::Resource"
         ],
         "body": [
-            "Route::resource('${1:posts}', '${2:Post}Controller')->${3|only,except|}([",
-            "\t'${4:index}', '${5:show}'${6:, '${7:more}'}$0",
-            "]);",
-            ""
+            "Route::resource('${1:posts}', '${2:Post}Controller')${3:->${4|only,except|}([",
+            "\t'${5:index}', '${6:show}'${7:, '${8:more}'}",
+            "])};",
+            "$0"
         ],
-        "description": "Laravel/route: specify a subset of actions the controller should handle instead of the full set of default actions."
+        "description": "Laravel/route(API): register many resourceful routes/API-routes to controllers"
     },
 
     "Route multiple resources": {
         "prefix": "Rt:Rsrcs / Route resources / Route::resources(",
         "body": [
             "Route::${1|resources,apiResources|}([",
-            "\t'${2:photos}' => '${3:Photo}Controller',",
-            "\t'${4:posts}' => '${5:Post}Controller'",
+            "\t'$3' => '$4Controller'${5:,",
+            "\t'$6' => '$7Controller'}",
             "]);",
             "$0"
         ],
-        "description": "Laravel/route: register a resourceful route to the controller"
+        "description": "Laravel/route: Register many resource controllers at once"
     },
     
     "Route Match Controller": {
@@ -53,11 +61,31 @@
         "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
     },
     
+    "Route Match Closure": {
+        "prefix": "Rt:Mtch:Fn / Route Match Function / Route::match",
+        "body": [
+            "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', function () {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
+    },
+    
     "Route Any Controller": {
         "prefix": "Rt:Any / Route Any / Route::any",
         "body": [
             "Route::any('${1:/}', '${2}Controller@${3:index}');"
         ],
-        "description": "Laravel/route: registers a route that respond to GET HTTP verb:"
+        "description": "Laravel/route: registers a route that respond to all HTTP verbs."
     },
+
+    "Route Any Closure": {
+        "prefix": "Rt:Any:Fn / Route Any Function / Route::any",
+        "body": [
+            "Route::any('${1:/}', function () {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Laravel/route: registers a route that respond to all HTTP verbs."
+    }
 }
