@@ -1,6 +1,6 @@
 # bla_de (Blade/Laravel)
 
-Blade/Laravel snippets for VS code (Visual Studio Code)
+Laravel (Blade & Route) snippets for VS code (Visual Studio Code)
 
 the most thing I have in mind is not adding custom string to the trigger string.
 
@@ -43,7 +43,7 @@ nothing yet!
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.0
 - Updates the snippet prefixes
 One thing that was bothering me was, when I was in the middle of typing a directive (e.g.: `@ext...`) and the list of snippets shows up, and I pick one, I end up with two at-signs (`@@extends('name')`)! So the first change I've made was replace the `b:` with `@ `.
 So, now we can have a nice `(@extends('name'))` withought needing to go back and remove the extra `@`
@@ -62,8 +62,9 @@ To be added in the middle of other 'if' blocks
   - 
 - Replaced almost every dashes '-' in the prefixes with a single space, since it is easier to hit the spacebar.
 
+- Route snippets have been added.
+
+- Route snippets have been added.
+
 - Removed:
   - ...
-
-### 0.0.2
-- Route snippets have been added.

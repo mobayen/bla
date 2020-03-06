@@ -2,16 +2,16 @@
     // Controller
 
     "Route Controller": {
-        "prefix": "Route /controller",
+        "prefix": "Rt:Ctrl / Route controller / Route::get / Route::post / Route::put / Route::patch / Route::delete / Route::options",
         "body": [
             "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:index}');",
             "$0"
         ],
-        "description": "Laravel/route: registers a route that respond to a HTTP verb:"
+        "description": "Laravel/route: registers a route that respond to a HTTP verb: (get, post, put, patch, delete, options)"
     },
     
     "Route single resource": {
-        "prefix": "Route resource /controller",
+        "prefix": "Rt:Rsrc / Route resource apiResource / Route::resource / Route::apiResource",
         "body": [
             "Route::${1|resource,apiResource|}('${2:posts}', '${3:Post}Controller');",
             "$0"
@@ -21,8 +21,8 @@
     
     "Route single resource only": {
         "prefix": [
-            "Route resource only /controller",
-            "Route resource except /controller"
+            "Rt:Rsrc:only / Route Resource Only / Route::Resource",
+            "Rt:Rsrc:excpt / Route Resource Except / Route::Resource"
         ],
         "body": [
             "Route::resource('${1:posts}', '${2:Post}Controller')->${3|only,except|}([",
@@ -34,11 +34,11 @@
     },
 
     "Route multiple resources": {
-        "prefix": "Route resources /controller",
+        "prefix": "Rt:Rsrcs / Route resources / Route::resources(",
         "body": [
             "Route::${1|resources,apiResources|}([",
-            "\t'${1:photos}' => '${2:Photo}Controller',",
-            "\t'${3:posts}' => '${4:Post}Controller'",
+            "\t'${2:photos}' => '${3:Photo}Controller',",
+            "\t'${4:posts}' => '${5:Post}Controller'",
             "]);",
             "$0"
         ],
@@ -46,7 +46,7 @@
     },
     
     "Route Match Controller": {
-        "prefix": "Route Match /controller",
+        "prefix": "Rt:Mtch / Route Match / Route::match",
         "body": [
             "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', '${6}Controller@${7:index}');"
         ],
@@ -54,7 +54,7 @@
     },
     
     "Route Any Controller": {
-        "prefix": "Route Any /controller",
+        "prefix": "Rt:Any / Route Any / Route::any",
         "body": [
             "Route::any('${1:/}', '${2}Controller@${3:index}');"
         ],
