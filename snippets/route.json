@@ -87,5 +87,41 @@
             "});"
         ],
         "description": "Laravel/route: registers a route that respond to all HTTP verbs."
+    },
+
+    // Route Group
+    "Route Group": {
+        "prefix": "Rt:Grp / Route::group Route::namespace Route::domain Route::prefix Route::name / Route Namespace Domain Prefix Name Group",
+        "body": [
+            "Route::${1:middleware(${2:['$3', '$4']})",
+            "\t->}${5:namespace('$6')",
+            "\t->}${7:domain('$8')",
+            "\t->}${9:prefix('$10')",
+            "\t->}${11:name('$12.')",
+            "\t->}group(function () {",
+            "\t\t$0",
+            "\t});"
+        ],
+        "descroption": "Laravel/route: Group routes by all or some of (namespace(), domain(), prefix(), name())."
+    },
+
+    // redirects
+    "Route Redirect": {
+        "prefix": "Rt:Rdrct / Route Redirect / Route::redirect",
+        "body": [
+            "Route::${1|redirect,permanentRedirect|}('/${2:here}', '/${3:there}'${4:, '${5:302}'});",
+            "$0"
+        ],
+        "descroption": "Laravel/route: Redirect to another URI."
+    },
+
+    // View Route
+    "View Route": {
+        "prefix": "Rt:Vw / Route View / Route::view",
+        "body": [
+            "Route::view('/${1:welcome}', '${2:welcome}'${3:, [$4]});",
+            "$0"
+        ],
+        "descroption": "Laravel/route: If the route only needs to return a view."
     }
 }

@@ -1,9 +1,9 @@
 {
     "name": "bla",
-    "displayName": "bla_de (Laravel/Blade)",
-    "description": "bla_de: Blade/Laravel snippets",
+    "displayName": "bla_de: Laravel",
+    "description": "bla_de: Laravel blade and route snippets",
     "publisher": "saintMiM",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "icon": "images/L-big.png",
     "repository": {
         "type": "git",
