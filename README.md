@@ -2,23 +2,48 @@
 
 Laravel (Blade & Route) snippets for VS code (Visual Studio Code)
 
-the most thing I have in mind is not adding custom string to the trigger string.
+the most thing I have in mind is not adding extra string/characters to the trigger string. The snippets should pop up when you are typing the code, but not some custome trigger.
+
 
 > no: `b:bla-bla`
+
 > no: `blade:bla-bla`
-> yes: `@ bla-bla`
 
-the space after the `@` make the snippet work if the developer typs just `bla-bla` witought the `@`
+> yes: `@bla-bla`
 
-> Originaly the snippets initialized with the "[Laravel Blade Snippets](https://github.com/onecentlin/laravel-blade-snippets-vscode)" and then I modified them.
+Just start type the actuall code (`@section`, `Route::get`, ...) the snippets show up.
+Easy, right?
 
-caution: the trigger strings (prefixes) could change until I found the best option!
+### Blade snippets
+Probably you noticed a space after the `@`. This make the snippet work if the developer types just `bla-bla` witought the `@`.
+So, that means the snippet will show up if you just type:
+`exten...`
+`secti...`
+`section sh...`
+
+> Originaly the Blade snippets initialized with the "[Laravel Blade Snippets](https://github.com/onecentlin/laravel-blade-snippets-vscode)" and then I modified them.
+
+### Route snippets
+The title of routes are too long to see it completely in the list of snippeted suggested when coding, so I had to add a short abbreviation of them! I know, that sucks but I couldn't find a better way that makes more sense :-(
+```
+Rt:Ctrl@actn
+Rt:Rsrc
+```
+But the good thing is it still works if you type the start part of the route, just like the blade snippets.
+```
+Route::g...
+Route::po...
+Route::reso...
+Route::apiRes...
+```
+
+## Use with caution: 
+the trigger strings (prefixes) may change at any time until I found the best option!
 
 ## Features
 
 - Blade snippets
 - Route snippets
-- More comming...
 
 ## Future features
 
@@ -40,6 +65,9 @@ nothing yet!
 ## Known Issues
 
 nothing yet!
+
+## Snippets
+- the list of trigger-snippet code will be added soon
 
 ## Release Notes
 
@@ -70,3 +98,11 @@ To be added in the middle of other 'if' blocks
 
 - Removed:
   - ...
+  
+### 0.2.0
+- Group routes by:
+  - Middleware
+  - Namespaces
+  - Subdomain Routing
+  - Route Prefixes
+  - Route Name Prefixes
