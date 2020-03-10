@@ -46,11 +46,11 @@ the trigger strings (prefixes) may change at any time until I found the best opt
 
 - Blade snippets
 - Route snippets
+- Highlight and jump between blade blocks opening and closing
 
 ## Future features
 
 - Format the code
-- highlight code
 - suggestion alternatives
 - PHP to blade convertor 
   - `<?php ?>` to `@PHP @endphp`
