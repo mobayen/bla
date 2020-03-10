@@ -1,8 +1,12 @@
 # bla_de (Blade/Laravel)
 
-Laravel (Blade & Route) snippets for VS code (Visual Studio Code)
+Laravel (Blade & Route) extension for VS code (Visual Studio Code)
 
-the most thing I have in mind is not adding extra string/characters to the trigger string. The snippets should pop up when you are typing the code, but not some custome trigger.
+<p align="center">
+    <img src="images/L-big.png" width="400">
+</p>
+
+The most important thing I have in mind is not adding extra string/characters to the trigger string. The snippets should pop up when you are typing the code, but not some custome trigger.
 
 
 > no: `b:bla-bla`
@@ -20,8 +24,6 @@ So, that means the snippet will show up if you just type:
 `exten...`
 `secti...`
 `section sh...`
-
-> Originaly the Blade snippets initialized with the "[Laravel Blade Snippets](https://github.com/onecentlin/laravel-blade-snippets-vscode)" and then I modified them.
 
 ### Route snippets
 The title of routes are too long to see it completely in the list of snippeted suggested when coding, so I had to add a short abbreviation of them! I know, that sucks but I couldn't find a better way that makes more sense :-(
@@ -54,20 +56,27 @@ the trigger strings (prefixes) may change at any time until I found the best opt
   - `<?php ?>` to `@PHP @endphp`
   - `if() { }` to `@if() @endif`
 
-<p align="center">
-<img src="images/L-big.png" width="400">
-</p>
-
 ## Extension Settings
 
 nothing yet!
 
 ## Known Issues
 
-nothing yet!
+The highlight/jump works for most of blocks in Blade (e.g: `@if @endif`) but it doesnt highlight/jump-to the middle directives (`@else`, `@else-if`, etc.). 
+The reason is in VSCode it is not allowed to pare an block-open (e.g.: `@if`) to more than one block-close (e.g.: either `@endif` or `@else`).
+
+In other word, in these (chained!) blocks, only the block-open and block-close can be highlighted and jump to.
+
+- @if @else-if @else @endif
+- @forelse(...) @empty @endforelse
+- @env @elseenv @else @endenv
+
 
 ## Snippets
-- the list of trigger-snippet code will be added soon
+
+> Originaly the Blade snippets initialized with the "Laravel Blade Snippets" and then I modified them.
+
+- The list of trigger-snippet code will be added soon
 
 ## Release Notes
 
@@ -106,3 +115,13 @@ To be added in the middle of other 'if' blocks
   - Subdomain Routing
   - Route Prefixes
   - Route Name Prefixes
+
+### 0.3.0
+- Highlight "blade open/close pairs of blocks" and jump between matching pairs
+  - @if @endif
+  - @foreach @endforeach
+  - @section @endsection
+  - etc.
+- Auto-closing-pairs works between single and double quotes nice and smoothly 
+> before:  `<div class='{{'>`
+> now:  `<div class='{{ }}'>`

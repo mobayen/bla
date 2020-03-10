@@ -312,16 +312,16 @@
         "description": "Blade: if block checks it is the first or last"
     },
 
-    "php": {
+    "php directive": {
         "prefix": "@ php",
         "body": [
             "@php",
             "\t$1",
             "@endphp"
         ],
-        "description": "Blade: @php block code in view"
+        "description": "Blade: @php block code in view."
     },
-
+    
     "includeIf": {
         "prefix": "@ includeIf",
         "body": [

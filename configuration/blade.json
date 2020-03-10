@@ -1,0 +1,32 @@
+{
+    "comments": {
+        "blockComment": [ "{{--", "--}}" ]
+    },
+    
+    "brackets": [
+        ["@if", "@endif"],
+
+        ["@foreach", "@endforeach"],
+        ["@forelse", "@endforelse"],
+        ["@for", "@endfor"],
+        ["@switch", "@endswitch"],
+        ["@case", "@break"],
+        ["@while", "@endwhile"],
+
+        ["@section", "@show"],
+        ["@section", "@endsection"],
+        ["@hasSection", "@endif"],
+
+        ["@error", "@enderror"],
+        ["@push", "@endpush"],
+        ["@prepend", "@endprepend"],
+        ["@env", "@endenv"]
+    ],
+
+    "autoCloseBefore": ";:.,=}])>` \n\t\"'",
+    
+    "autoClosingPairs": [
+        { "open": "@php", "close": "@endphp" ,  "notIn": ["comment"] },
+        { "open": "<?php", "close": "?>" ,  "notIn": ["comment"] }
+    ]
+}

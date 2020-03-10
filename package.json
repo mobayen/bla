@@ -1,9 +1,9 @@
 {
-    "name": "bla",
-    "displayName": "bla_de: Laravel",
-    "description": "bla_de: Laravel blade and route snippets",
+    "name": "laravel-bla",
+    "displayName": "bla_de: Laravel blade/route",
+    "description": "bla_de is a Laravel blade and route VS Code extension",
     "publisher": "saintMiM",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "icon": "images/L-big.png",
     "repository": {
         "type": "git",
@@ -17,6 +17,7 @@
         "laravel snippets",
         "blade snippets",
         "route snippets",
+        "highliting",
         "bla_de",
         "bla de",
         "bla bla bla",
@@ -26,6 +27,7 @@
         "vscode": "^1.42.0"
     },
     "categories": [
+        "Programming Languages",
         "Snippets"
     ],
     "contributes": {
@@ -37,6 +39,20 @@
             {
                 "language": "php",
                 "path": "./snippets/route.json"
+            }
+        ],
+        "languages": [
+            {
+                "id": "blade",
+                "extensions": [
+                    ".blade.php"
+                ],
+                "aliases": [
+                    "blade",
+                    "Blade",
+                    "Laravel Blade"
+                ],
+                "configuration": "./configuration/blade.json"
             }
         ]
     }
