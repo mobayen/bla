@@ -4,6 +4,10 @@
     },
     
     "brackets": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+
         ["@if", "@endif"],
 
         ["@foreach", "@endforeach"],
@@ -26,7 +30,21 @@
     "autoCloseBefore": ";:.,=}])>` \n\t\"'",
     
     "autoClosingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"],
+
         { "open": "@php", "close": "@endphp" ,  "notIn": ["comment"] },
         { "open": "<?php", "close": "?>" ,  "notIn": ["comment"] }
+    ],
+
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
     ]
 }
