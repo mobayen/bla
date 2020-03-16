@@ -125,3 +125,9 @@ To be added in the middle of other 'if' blocks
 - Auto-closing-pairs works between single and double quotes nice and smoothly 
 > before:  `<div class='{{'>`
 > now:  `<div class='{{ }}'>`
+- ### 0.3.1
+  - Brings back the default braces and pairs
+- ### 0.3.2
+  - Auto Close braces when cursor is just before a '<'
+    - before: `<a href="">{{</a>`
+    - after: `<a href="">{{}}</a>`
