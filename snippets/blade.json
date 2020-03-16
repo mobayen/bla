@@ -21,7 +21,7 @@
         "prefix": "@ section",
         "body": [
             "@section('${1:name}')",
-            "\t$2",
+            "\t$0",
             "@endsection"
         ],
         "description": "Blade: content section/endsection"
@@ -31,7 +31,7 @@
         "prefix": "@ section show",
         "body": [
             "@section('$1')",
-            "\t$2",
+            "\t$0",
             "@show"
         ],
         "description": "Blade: content section/show"
@@ -53,7 +53,7 @@
         "prefix": "@ if",
         "body": [
             "@if ($1)",
-            "\t$2",
+            "\t$0",
             "@endif"
         ],
         "description": "Blade: @if block"
@@ -65,7 +65,7 @@
             "@if ($1)",
             "\t$2",
             "@else",
-            "\t$3",
+            "\t$0",
             "@endif"
         ],
         "description": "Blade: if-else block"
@@ -79,7 +79,7 @@
             "@elseif ($3)",
             "\t$4",
             "@else",
-            "\t$5",
+            "\t$0",
             "@endif"
         ],
         "description": "Blade: if-else-if block"
@@ -90,7 +90,7 @@
         "prefix": "@ else-if",
         "body": [
             "@elseif ($1)",
-            "\t$2"
+            "\t$0"
         ],
         "description": "Blade: else-if line alone"
     },
@@ -101,7 +101,7 @@
             "@hasSection('${1:name}')",
             "\t@yield('${1:name}')",
             "@else",
-            "\t$3",
+            "\t$0",
             "@endif"
         ],
         "description": "Blade: @hasSection condition"
@@ -111,7 +111,7 @@
         "prefix": "@ unless",
         "body": [
             "@unless ($1)",
-            "\t$2",
+            "\t$0",
             "@endunless"
         ],
         "description": "Blade: @unless block"
@@ -123,7 +123,7 @@
         "prefix": "@ for",
         "body": [
             "@for (\\$i = ${1:0}; \\$i < ${2:\\$count}; \\$i++)",
-            "\t$3",
+            "\t$0",
             "@endfor"
         ],
         "description": "Blade: @for block"
@@ -133,7 +133,7 @@
         "prefix": "@ foreach",
         "body": [
             "@foreach (${1:\\$collection} as ${2:\\$item})",
-            "\t$3",
+            "\t$0",
             "@endforeach"
         ],
         "description": "Blade: @foreach block"
@@ -145,7 +145,7 @@
             "@forelse (${1:\\$collection} as ${2:\\$item})",
             "\t$3",
             "@empty",
-            "\t$4",
+            "\t$0",
             "@endforelse"
         ],
         "description": "Blade: @forelse block"
@@ -155,7 +155,7 @@
         "prefix": "@ while",
         "body": [
             "@while ($1)",
-            "\t$2",
+            "\t$0",
             "@endwhile"
         ],
         "description": "Blade: @while block"
@@ -176,7 +176,7 @@
     "blade comment": {
         "prefix": "@ comment",
         "body": [
-            "{{-- ${1:comment} --}}"
+            "{{-- $0 --}}"
         ],
         "description": "Blade: comment block"
     },
@@ -211,7 +211,7 @@
         "prefix": "@ verbatim",
         "body": [
             "@verbatim",
-            "\t{{ ${1:variable} }}$2",
+            "\t{{ ${1:variable} }}$0",
             "@endverbatim"
         ],
         "description": "Blade: displaying JavaScript variables in a large portion of your template"
@@ -222,7 +222,7 @@
         "prefix": "@ push",
         "body": [
             "@push('${1:name}')",
-            "\t$2",
+            "\t$0",
             "@endpush"
         ],
         "description": "Blade: @push stack"
@@ -252,7 +252,7 @@
         "prefix": "@ can",
         "body": [
             "@can('${1:update}', ${2:Model}::class)",
-            "\t$3",
+            "\t$0",
             "@endcan"
         ],
         "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
@@ -264,7 +264,7 @@
             "@can('${1:update}', ${2:\\$post})",
             "\t$3",
             "@elsecan('${4:create}', $2)",
-            "\t$5",
+            "\t$0",
             "@endcan"
         ],
         "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
@@ -274,7 +274,7 @@
         "prefix": "@ cannot",
         "body": [
             "@cannot('${1:update}', ${2:Model}::class)",
-            "\t$3",
+            "\t$0",
             "@endcannot"
         ],
         "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
@@ -286,7 +286,7 @@
             "@cannot('${1:update}', ${2:\\$post})",
             "\t$3",
             "@elsecannot('${4:create}', $2)",
-            "\t$5",
+            "\t$0",
             "@endcannot"
         ],
         "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
@@ -316,7 +316,7 @@
         "prefix": "@ php",
         "body": [
             "@php",
-            "\t$1",
+            "\t$0",
             "@endphp"
         ],
         "description": "Blade: @php block code in view."
@@ -334,7 +334,7 @@
         "prefix": "@ component",
         "body": [
             "@component('$1')",
-            "\t$2",
+            "\t$0",
             "@endcomponent"
         ],
         "description": "Blade: component"
@@ -344,7 +344,7 @@
         "prefix": "@ slot",
         "body": [
             "@slot('$1')",
-            "\t$2",
+            "\t$0",
             "@endslot"
         ],
         "description": "Blade: slot"
@@ -354,7 +354,7 @@
         "prefix": "@ isset",
         "body": [
             "@isset(${1:\\$record})",
-            "\t$2",
+            "\t$0",
             "@endisset"
         ],
         "description": "Blade: isset"
@@ -364,7 +364,7 @@
         "prefix": "@ empty",
         "body": [
             "@empty(${1:\\$record})",
-            "\t$2",
+            "\t$0",
             "@endempty"
         ],
         "description": "Blade: empty"
@@ -390,7 +390,7 @@
         "prefix": "@ auth",
         "body": [
             "@auth",
-            "\t$1",
+            "\t$0",
             "@endauth"
         ],
         "description": "Blade: auth"
@@ -400,7 +400,7 @@
         "prefix": "@ guest",
         "body": [
             "@guest",
-            "\t$1",
+            "\t$0",
             "@endguest"
         ],
         "description": "Blade: guest"
@@ -417,7 +417,7 @@
             "\t\t$5",
             "\t\t@break",
             "\t@default",
-            "\t\t$6",
+            "\t\t$0",
             "@endswitch"
         ],
         "description": "Blade: switch"
@@ -434,7 +434,7 @@
     "method": {
         "prefix": "@ method",
         "body": [
-            "@method($1)"
+            "@method('${1|get,post,put,patch,delete|}')"
         ],
         "description": "Blade: form method field"
     },
@@ -443,7 +443,7 @@
         "prefix": "@ if is Method",
         "body": [
             "@if (${1:request()}->isMethod('${2:post}'))",
-            "\t$3",
+            "\t$0",
             "@endif"
         ],
         "description": "Blade: form method field"
@@ -452,7 +452,7 @@
     "dump": {
         "prefix": "@ dump",
         "body": [
-            "@dump($1)"
+            "@dump($0)"
         ],
         "description": "Blade: dump"
     },

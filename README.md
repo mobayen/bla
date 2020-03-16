@@ -131,3 +131,5 @@ To be added in the middle of other 'if' blocks
   - Auto Close braces when cursor is just before a '<'
     - before: `<a href="">{{</a>`
     - after: `<a href="">{{}}</a>`
+- ### 0.3.3
+  - Modify the final cursor position for some snippets
