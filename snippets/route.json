@@ -1,6 +1,6 @@
 {
     "Route Controller": {
-        "prefix": "Rt:Ctrl@actn / Route controller / Route::get / Route::post / Route::put / Route::patch / Route::delete / Route::options",
+        "prefix": "Rt:Ctrl@actn Route controller Route::get Route::post Route::put Route::patch Route::delete Route::options",
         "body": [
             "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:${5|index,create,store,show,edit,update,destroy|}}');",
             "$0"
@@ -9,7 +9,7 @@
     },
 
     "Route Closure": {
-        "prefix": "Rt:Fn / Route Function / Route controller / Route::get / Route::post / Route::put / Route::patch / Route::delete / Route::options",
+        "prefix": "Rt:Fn Route Function Route controller Route::get Route::post Route::put Route::patch Route::delete Route::options",
         "body": [
             "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', function () {",
             "\t$0",
@@ -19,7 +19,7 @@
     },
     
     "Route single resource": {
-        "prefix": "Rt:Rsrc / Route resource apiResource / Route::resource / Route::apiResource",
+        "prefix": "Rt:Rsrc Route resource apiResource Route::resource Route::apiResource",
         "body": [
             "Route::${1|resource,apiResource|}('$2', '$3Controller');",
             "$0"
@@ -29,8 +29,8 @@
 
     "Route single resource only": {
         "prefix": [
-            "Rt:Rsrc:only / Route Resource Only / Route::Resource",
-            "Rt:Rsrc:excpt / Route Resource Except / Route::Resource"
+            "Rt:Rsrc:only Route Resource Only Route::Resource",
+            "Rt:Rsrc:excpt Route Resource Except Route::Resource"
         ],
         "body": [
             "Route::resource('${1:posts}', '${2:Post}Controller')${3:->${4|only,except|}([",
@@ -42,7 +42,7 @@
     },
 
     "Route multiple resources": {
-        "prefix": "Rt:Rsrcs / Route resources / Route::resources(",
+        "prefix": "Rt:Rsrcs Route resources Route::resources(",
         "body": [
             "Route::${1|resources,apiResources|}([",
             "\t'$3' => '$4Controller'${5:,",
@@ -54,7 +54,7 @@
     },
     
     "Route Match Controller": {
-        "prefix": "Rt:Mtch / Route Match / Route::match",
+        "prefix": "Rt:Mtch Route Match Route::match",
         "body": [
             "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', '${6}Controller@${7:index}');"
         ],
@@ -62,7 +62,7 @@
     },
     
     "Route Match Closure": {
-        "prefix": "Rt:Mtch:Fn / Route Match Function / Route::match",
+        "prefix": "Rt:Mtch:Fn Route Match Function Route::match",
         "body": [
             "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', function () {",
             "\t$0",
@@ -72,7 +72,7 @@
     },
     
     "Route Any Controller": {
-        "prefix": "Rt:Any / Route Any / Route::any",
+        "prefix": "Rt:Any Route::any Route Any",
         "body": [
             "Route::any('${1:/}', '${2}Controller@${3:index}');"
         ],
@@ -80,7 +80,7 @@
     },
 
     "Route Any Closure": {
-        "prefix": "Rt:Any:Fn / Route Any Function / Route::any",
+        "prefix": "Rt:Any:Fn Route::any Route Any Function",
         "body": [
             "Route::any('${1:/}', function () {",
             "\t$0",
@@ -91,7 +91,7 @@
 
     // Route Group
     "Route Group": {
-        "prefix": "Rt:Grp / Route::group Route::namespace Route::domain Route::prefix Route::name / Route Namespace Domain Prefix Name Group",
+        "prefix": "Rt:Grp Route::group Route::namespace Route::domain Route::prefix Route::name Route Namespace Domain Prefix Name Group",
         "body": [
             "Route::${1:middleware(${2:['$3', '$4']})",
             "\t->}${5:namespace('$6')",
@@ -107,7 +107,7 @@
 
     // redirects
     "Route Redirect": {
-        "prefix": "Rt:Rdrct / Route Redirect / Route::redirect",
+        "prefix": "Rt:Rdrct Route Redirect Route::redirect",
         "body": [
             "Route::${1|redirect,permanentRedirect|}('/${2:here}', '/${3:there}'${4:, '${5:302}'});",
             "$0"
@@ -117,7 +117,7 @@
 
     // View Route
     "View Route": {
-        "prefix": "Rt:Vw / Route View / Route::view",
+        "prefix": "Rt:Vw Route View Route::view",
         "body": [
             "Route::view('/${1:welcome}', '${2:welcome}'${3:, [$4]});",
             "$0"
