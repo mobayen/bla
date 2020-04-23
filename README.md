@@ -133,3 +133,6 @@ To be added in the middle of other 'if' blocks
     - after: `<a href="">{{}}</a>`
 - ### 0.3.3
   - Modify the final cursor position for some snippets
+
+### 0.4.0
+- Adds the Unescaped-Data mustache syntax {!!|!!}
