@@ -136,3 +136,5 @@ To be added in the middle of other 'if' blocks
 
 ### 0.4.0
 - Adds the Unescaped-Data mustache syntax {!!|!!}
+- ### 0.4.1
+  - Improves the route 'trigger' text to stop trigger the snippets randomly
