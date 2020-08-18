@@ -138,3 +138,10 @@ To be added in the middle of other 'if' blocks
 - Adds the Unescaped-Data mustache syntax {!!|!!}
 - ### 0.4.1
   - Improves the route 'trigger' text to stop trigger the snippets randomly
+- ### 0.4.2
+  - removes the extra tab between @php and @endphp
+
+### 0.5.0
+- Adds two more snippets
+  - @dd()
+  - the combo of @extend and @section
