@@ -316,7 +316,7 @@
         "prefix": "@ php",
         "body": [
             "@php",
-            "\t$0",
+            "$0",
             "@endphp"
         ],
         "description": "Blade: @php block code in view."
