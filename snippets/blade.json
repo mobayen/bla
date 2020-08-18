@@ -18,9 +18,19 @@
     "body": ["@section('${1:name}')", "\t$0", "@endsection"],
     "description": "Blade: content section/endsection"
   },
+  
+  "Extends and Section": {
+    "prefix": "@ ext-sect @extends @section",
+    "body": [
+      "@extends('${1:layouts/}')",
+      "@section('${3:sectionName}')",
+      "\t$0", "@endsection"
+    ],
+    "description": "Blade: extends section combo"
+  },
 
   "Content Section Show": {
-    "prefix": "@ sect.show section show",
+    "prefix": "@ sect-show section show",
     "body": ["@section('$1')", "\t$0", "@show"],
     "description": "Blade: content section/show"
   },
@@ -350,6 +360,12 @@
     "prefix": "@ dump",
     "body": ["@dump($0)"],
     "description": "Blade: dump"
+  },
+  
+  "dump and die": {
+    "prefix": "@ dd",
+    "body": ["@dd($0)"],
+    "description": "Blade: dd"
   },
 
   /* Retrieving Translation Strings */
