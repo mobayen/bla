@@ -1,469 +1,362 @@
 {
-    /* Extending a layout */
+  /* Extending a layout */
 
-    "Extend layout": {
-        "prefix": "@ extends",
-        "body": [
-            "@extends('${1:name}')"
-        ],
-        "description": "Blade: extends a Blade layout"
-    },
+  "Extend layout": {
+    "prefix": "@ extends",
+    "body": ["@extends('${1:name}')"],
+    "description": "Blade: extends a Blade layout"
+  },
 
-    "Yield content": {
-        "prefix": "@ yield",
-        "body": [
-            "@yield('${1:name}')"
-        ],
-        "description": "Blade: yield content section"
-    },
+  "Yield content": {
+    "prefix": "@ yield",
+    "body": ["@yield('${1:name}')"],
+    "description": "Blade: yield content section"
+  },
 
-    "Content Section": {
-        "prefix": "@ section",
-        "body": [
-            "@section('${1:name}')",
-            "\t$0",
-            "@endsection"
-        ],
-        "description": "Blade: content section/endsection"
-    },
+  "Content Section": {
+    "prefix": "@ section",
+    "body": ["@section('${1:name}')", "\t$0", "@endsection"],
+    "description": "Blade: content section/endsection"
+  },
 
-    "Content Section Show": {
-        "prefix": "@ sect.show section show",
-        "body": [
-            "@section('$1')",
-            "\t$0",
-            "@show"
-        ],
-        "description": "Blade: content section/show"
-    },
+  "Content Section Show": {
+    "prefix": "@ sect.show section show",
+    "body": ["@section('$1')", "\t$0", "@show"],
+    "description": "Blade: content section/show"
+  },
 
-    /* Include sub-view */
+  /* Include sub-view */
 
-    "Include view": {
-        "prefix": "@ include",
-        "body": [
-            "@include('${1:name}')"
-        ],
-        "description": "Blade: include view"
-    },
+  "Include view": {
+    "prefix": "@ include",
+    "body": ["@include('${1:name}')"],
+    "description": "Blade: include view"
+  },
 
-    /* If Statements */
+  /* If Statements */
 
-    "If-block": {
-        "prefix": "@ if",
-        "body": [
-            "@if ($1)",
-            "\t$0",
-            "@endif"
-        ],
-        "description": "Blade: @if block"
-    },
+  "If-block": {
+    "prefix": "@ if",
+    "body": ["@if ($1)", "\t$0", "@endif"],
+    "description": "Blade: @if block"
+  },
 
-    "If-else-block": {
-        "prefix": "@ if else",
-        "body": [
-            "@if ($1)",
-            "\t$2",
-            "@else",
-            "\t$0",
-            "@endif"
-        ],
-        "description": "Blade: if-else block"
-    },
+  "If-else-block": {
+    "prefix": "@ if else",
+    "body": ["@if ($1)", "\t$2", "@else", "\t$0", "@endif"],
+    "description": "Blade: if-else block"
+  },
 
-    "If-else-if-block": {
-        "prefix": "@ if elseif",
-        "body": [
-            "@if ($1)",
-            "\t$2",
-            "@elseif ($3)",
-            "\t$4",
-            "@else",
-            "\t$0",
-            "@endif"
-        ],
-        "description": "Blade: if-else-if block"
-    },
-    
-    /* just a line, but not a whole block */
-    "else-if-line": {
-        "prefix": "@ else-if",
-        "body": [
-            "@elseif ($1)",
-            "\t$0"
-        ],
-        "description": "Blade: else-if line alone. In case it needed in the middle of an 'if' block."
-    },
+  "If-else-if-block": {
+    "prefix": "@ if elseif",
+    "body": [
+      "@if ($1)",
+      "\t$2",
+      "@elseif ($3)",
+      "\t$4",
+      "@else",
+      "\t$0",
+      "@endif"
+    ],
+    "description": "Blade: if-else-if block"
+  },
 
-    "Has Section": {
-        "prefix": "@ has section",
-        "body": [
-            "@hasSection('${1:name}')",
-            "\t@yield('${1:name}')",
-            "@else",
-            "\t$0",
-            "@endif"
-        ],
-        "description": "Blade: @hasSection condition"
-    },
+  /* just a line, but not a whole block */
+  "else-if-line": {
+    "prefix": "@ else-if",
+    "body": ["@elseif ($1)", "\t$0"],
+    "description": "Blade: else-if line alone. In case it needed in the middle of an 'if' block."
+  },
 
-    "Unless-block": {
-        "prefix": "@ unless",
-        "body": [
-            "@unless ($1)",
-            "\t$0",
-            "@endunless"
-        ],
-        "description": "Blade: @unless block"
-    },
+  "Has Section": {
+    "prefix": "@ has section",
+    "body": [
+      "@hasSection('${1:name}')",
+      "\t@yield('${1:name}')",
+      "@else",
+      "\t$0",
+      "@endif"
+    ],
+    "description": "Blade: @hasSection condition"
+  },
 
-    /* Loops */
+  "Unless-block": {
+    "prefix": "@ unless",
+    "body": ["@unless ($1)", "\t$0", "@endunless"],
+    "description": "Blade: @unless block"
+  },
 
-    "For-block": {
-        "prefix": "@ for",
-        "body": [
-            "@for (\\$i = ${1:0}; \\$i < ${2:\\$count}; \\$i++)",
-            "\t$0",
-            "@endfor"
-        ],
-        "description": "Blade: @for block"
-    },
+  /* Loops */
 
-    "Foreach-block": {
-        "prefix": "@ foreach",
-        "body": [
-            "@foreach (${1:\\$collection} as ${2:\\$item})",
-            "\t$0",
-            "@endforeach"
-        ],
-        "description": "Blade: @foreach block"
-    },
+  "For-block": {
+    "prefix": "@ for",
+    "body": [
+      "@for (\\$i = ${1:0}; \\$i < ${2:\\$count}; \\$i++)",
+      "\t$0",
+      "@endfor"
+    ],
+    "description": "Blade: @for block"
+  },
 
-    "forelse-block": {
-        "prefix": "@ forelse",
-        "body": [
-            "@forelse (${1:\\$collection} as ${2:\\$item})",
-            "\t$3",
-            "@empty",
-            "\t$0",
-            "@endforelse"
-        ],
-        "description": "Blade: @forelse block"
-    },
-    
-    "while-block": {
-        "prefix": "@ while",
-        "body": [
-            "@while ($1)",
-            "\t$0",
-            "@endwhile"
-        ],
-        "description": "Blade: @while block"
-    },
+  "Foreach-block": {
+    "prefix": "@ foreach",
+    "body": [
+      "@foreach (${1:\\$collection} as ${2:\\$item})",
+      "\t$0",
+      "@endforeach"
+    ],
+    "description": "Blade: @foreach block"
+  },
 
-    /* Rendering views for collections */
+  "forelse-block": {
+    "prefix": "@ forelse",
+    "body": [
+      "@forelse (${1:\\$collection} as ${2:\\$item})",
+      "\t$3",
+      "@empty",
+      "\t$0",
+      "@endforelse"
+    ],
+    "description": "Blade: @forelse block"
+  },
 
-    "each loop": {
-        "prefix": "@ each",
-        "body": [
-            "@each('${1:view.name}', ${2:\\$collection}, '${3:variable}', '${4:view.empty}')"
-        ],
-        "description": "Blade: @each loop"
-    },
+  "while-block": {
+    "prefix": "@ while",
+    "body": ["@while ($1)", "\t$0", "@endwhile"],
+    "description": "Blade: @while block"
+  },
 
-    /* Comments */
+  /* Rendering views for collections */
 
-    "blade comment": {
-        "prefix": "@ comment",
-        "body": [
-            "{{-- $0 --}}"
-        ],
-        "description": "Blade: comment block"
-    },
+  "each loop": {
+    "prefix": "@ each",
+    "body": [
+      "@each('${1:view.name}', ${2:\\$collection}, '${3:variable}', '${4:view.empty}')"
+    ],
+    "description": "Blade: @each loop"
+  },
 
-    /* Display Data */
+  /* Comments */
 
-    "blade echo-data": {
-        "prefix": "@ mustache Esc",
-        "body": [
-            "{{ ${1:\\$data} }}"
-        ],
-        "description": "Blade: Mustache syntax to echo data. I know, it is useless, but still...!"
-    },
+  "blade comment": {
+    "prefix": "@ comment",
+    "body": ["{{-- $0 --}}"],
+    "description": "Blade: comment block"
+  },
 
-    "blade echo-unescaped-data": {
-        "prefix": "@ mustache UnEsc",
-        "body": [
-            "{!! ${1:\\$html_data} !!}"
-        ],
-        "description": "Blade: Mustache syntax to echo unescaped data (allow html outputs).  I know, it is useless, but still...!"
-    },
+  /* Display Data */
 
-    "blade echo-untouch": {
-        "prefix": "@ mustache UnTouched",
-        "body": [
-            "@{{ ${1:variable} }}"
-        ],
-        "description": "Blade: echo untouched data (allow javascript expression)"
-    },
+  "blade echo-data": {
+    "prefix": "@ mustache Esc",
+    "body": ["{{ ${1:\\$data} }}"],
+    "description": "Blade: Mustache syntax to echo data. I know, it is useless, but still...!"
+  },
 
-    "blade verbatim": {
-        "prefix": "@ verbatim",
-        "body": [
-            "@verbatim",
-            "\t{{ ${1:variable} }}$0",
-            "@endverbatim"
-        ],
-        "description": "Blade: displaying JavaScript variables in a large portion of your template"
-    },
+  "blade echo-unescaped-data": {
+    "prefix": "@ mustache UnEsc",
+    "body": ["{!! ${1:\\$html_data} !!}"],
+    "description": "Blade: Mustache syntax to echo unescaped data (allow html outputs).  I know, it is useless, but still...!"
+  },
 
-    /* Stacks */
-    "Push stack": {
-        "prefix": "@ push",
-        "body": [
-            "@push('${1:name}')",
-            "\t$0",
-            "@endpush"
-        ],
-        "description": "Blade: @push stack"
-    },
+  "blade echo-untouch": {
+    "prefix": "@ mustache UnTouched",
+    "body": ["@{{ ${1:variable} }}"],
+    "description": "Blade: echo untouched data (allow javascript expression)"
+  },
 
-    "Stack": {
-        "prefix": "@ stack",
-        "body": [
-            "@stack('${1:name}')"
-        ],
-        "description": "Blade: @stack"
-    },
+  "blade verbatim": {
+    "prefix": "@ verbatim",
+    "body": ["@verbatim", "\t{{ ${1:variable} }}$0", "@endverbatim"],
+    "description": "Blade: displaying JavaScript variables in a large portion of your template"
+  },
 
-    /* Service Injection */
+  /* Stacks */
+  "Push stack": {
+    "prefix": "@ push",
+    "body": ["@push('${1:name}')", "\t$0", "@endpush"],
+    "description": "Blade: @push stack"
+  },
 
-    "inject service": {
-        "prefix": "@ inject",
-        "body": [
-            "@inject('${1:name}', '${2:class}')"
-        ],
-        "description": "Blade: @inject Service"
-    },
+  "Stack": {
+    "prefix": "@ stack",
+    "body": ["@stack('${1:name}')"],
+    "description": "Blade: @stack"
+  },
 
-    /* Authorizing */
+  /* Service Injection */
 
-    "can": {
-        "prefix": "@ can",
-        "body": [
-            "@can('${1:update}', ${2:Model}::class)",
-            "\t$0",
-            "@endcan"
-        ],
-        "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
-    },
+  "inject service": {
+    "prefix": "@ inject",
+    "body": ["@inject('${1:name}', '${2:class}')"],
+    "description": "Blade: @inject Service"
+  },
 
-    "can-elsecan": {
-        "prefix": "@ can elsecan",
-        "body": [
-            "@can('${1:update}', ${2:\\$post})",
-            "\t$3",
-            "@elsecan('${4:create}', $2)",
-            "\t$0",
-            "@endcan"
-        ],
-        "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
-    },
+  /* Authorizing */
 
-    "cannot": {
-        "prefix": "@ cannot",
-        "body": [
-            "@cannot('${1:update}', ${2:Model}::class)",
-            "\t$0",
-            "@endcannot"
-        ],
-        "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
-    },
+  "can": {
+    "prefix": "@ can",
+    "body": ["@can('${1:update}', ${2:Model}::class)", "\t$0", "@endcan"],
+    "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
+  },
 
-    "can-elsecannot": {
-        "prefix": "@ cannot elsecannot",
-        "body": [
-            "@cannot('${1:update}', ${2:\\$post})",
-            "\t$3",
-            "@elsecannot('${4:create}', $2)",
-            "\t$0",
-            "@endcannot"
-        ],
-        "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
-    },
+  "can-elsecan": {
+    "prefix": "@ can elsecan",
+    "body": [
+      "@can('${1:update}', ${2:\\$post})",
+      "\t$3",
+      "@elsecan('${4:create}', $2)",
+      "\t$0",
+      "@endcan"
+    ],
+    "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
+  },
 
-    /* $loop variable */
+  "cannot": {
+    "prefix": "@ cannot",
+    "body": ["@cannot('${1:update}', ${2:Model}::class)", "\t$0", "@endcannot"],
+    "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
+  },
 
-    "loop": {
-        "prefix": "@ loop",
-        "body": [
-            "\\$loop->${1:first}"
-        ],
-        "description": "Blade: $loop->(index|remaining|count|first|last|depth|parent)"
-    },
-    // deprecate ???
-    "if loop first/last": {
-        "prefix": "@ if $loop",
-        "body": [
-            "@if (\\$loop->$1)",
-            "\t${2:{{-- This is the $1 iteration --\\}\\}}",
-            "@endif"
-        ],
-        "description": "Blade: if block checks it is the first or last"
-    },
+  "can-elsecannot": {
+    "prefix": "@ cannot elsecannot",
+    "body": [
+      "@cannot('${1:update}', ${2:\\$post})",
+      "\t$3",
+      "@elsecannot('${4:create}', $2)",
+      "\t$0",
+      "@endcannot"
+    ],
+    "description": "Blade: display a portion of the page only if the user is authorized to perform a given action."
+  },
 
-    "php directive": {
-        "prefix": "@ php",
-        "body": [
-            "@php",
-            "$0",
-            "@endphp"
-        ],
-        "description": "Blade: @php block code in view."
-    },
-    
-    "includeIf": {
-        "prefix": "@ includeIf",
-        "body": [
-            "@includeIf('${1:view.name}'${2:, ['some' => 'data']})"
-        ],
-        "description": "Blade: include a view that may or may not be present, you should use the @includeIf directive"
-    },
+  /* $loop variable */
 
-    "component": {
-        "prefix": "@ component",
-        "body": [
-            "@component('$1')",
-            "\t$0",
-            "@endcomponent"
-        ],
-        "description": "Blade: component"
-    },
+  "loop": {
+    "prefix": "@ loop",
+    "body": ["\\$loop->${1:first}"],
+    "description": "Blade: $loop->(index|remaining|count|first|last|depth|parent)"
+  },
+  // deprecate ???
+  "if loop first/last": {
+    "prefix": "@ if $loop",
+    "body": [
+      "@if (\\$loop->$1)",
+      "\t${2:{{-- This is the $1 iteration --\\}\\}}",
+      "@endif"
+    ],
+    "description": "Blade: if block checks it is the first or last"
+  },
 
-    "slot": {
-        "prefix": "@ slot",
-        "body": [
-            "@slot('$1')",
-            "\t$0",
-            "@endslot"
-        ],
-        "description": "Blade: slot"
-    },
+  "php directive": {
+    "prefix": "@ php",
+    "body": ["@php", "$0", "@endphp"],
+    "description": "Blade: @php block code in view."
+  },
 
-    "isset": {
-        "prefix": "@ isset",
-        "body": [
-            "@isset(${1:\\$record})",
-            "\t$0",
-            "@endisset"
-        ],
-        "description": "Blade: isset"
-    },
+  "includeIf": {
+    "prefix": "@ includeIf",
+    "body": ["@includeIf('${1:view.name}'${2:, ['some' => 'data']})"],
+    "description": "Blade: include a view that may or may not be present, you should use the @includeIf directive"
+  },
 
-    "empty": {
-        "prefix": "@ empty",
-        "body": [
-            "@empty(${1:\\$record})",
-            "\t$0",
-            "@endempty"
-        ],
-        "description": "Blade: empty"
-    },
+  "component": {
+    "prefix": "@ component",
+    "body": ["@component('$1')", "\t$0", "@endcomponent"],
+    "description": "Blade: component"
+  },
 
-    "includeWhen": {
-        "prefix": "@ includeWhen",
-        "body": [
-            "@includeWhen(${1:\\$boolean}, '${2:view.name}', [${3:'some' => 'data'}])"
-        ],
-        "description": "Blade: includeWhen"
-    },
-    
-    "includeFirst": {
-        "prefix": "@ includeFirst",
-        "body": [
-            "@includeFirst(['${1:view.name}', '${2:variable}'], [${3:'some' => 'data'}])"
-        ],
-        "description": "Blade: includeFirst"
-    },
+  "slot": {
+    "prefix": "@ slot",
+    "body": ["@slot('$1')", "\t$0", "@endslot"],
+    "description": "Blade: slot"
+  },
 
-    "auth": {
-        "prefix": "@ auth",
-        "body": [
-            "@auth",
-            "\t$0",
-            "@endauth"
-        ],
-        "description": "Blade: auth"
-    },
+  "isset": {
+    "prefix": "@ isset",
+    "body": ["@isset(${1:\\$record})", "\t$0", "@endisset"],
+    "description": "Blade: isset"
+  },
 
-    "guest": {
-        "prefix": "@ guest",
-        "body": [
-            "@guest",
-            "\t$0",
-            "@endguest"
-        ],
-        "description": "Blade: guest"
-    },
+  "empty": {
+    "prefix": "@ empty",
+    "body": ["@empty(${1:\\$record})", "\t$0", "@endempty"],
+    "description": "Blade: empty"
+  },
 
-    "switch": {
-        "prefix": "@ switch",
-        "body": [
-            "@switch(${1:\\$type})",
-            "\t@case(${2:1})",
-            "\t\t$3",
-            "\t\t@break",
-            "\t@case(${4:2})",
-            "\t\t$5",
-            "\t\t@break",
-            "\t@default",
-            "\t\t$0",
-            "@endswitch"
-        ],
-        "description": "Blade: switch"
-    },
+  "includeWhen": {
+    "prefix": "@ includeWhen",
+    "body": [
+      "@includeWhen(${1:\\$boolean}, '${2:view.name}', [${3:'some' => 'data'}])"
+    ],
+    "description": "Blade: includeWhen"
+  },
 
-    "csrf": {
-        "prefix": "@ csrf",
-        "body": [
-            "@csrf"
-        ],
-        "description": "Blade: form csrf field"
-    },
+  "includeFirst": {
+    "prefix": "@ includeFirst",
+    "body": [
+      "@includeFirst(['${1:view.name}', '${2:variable}'], [${3:'some' => 'data'}])"
+    ],
+    "description": "Blade: includeFirst"
+  },
 
-    "method": {
-        "prefix": "@ method",
-        "body": [
-            "@method('${1|get,post,put,patch,delete|}')"
-        ],
-        "description": "Blade: form method field"
-    },
-    
-    "if is method": {
-        "prefix": "@ if is Method",
-        "body": [
-            "@if (${1:request()}->isMethod('${2:post}'))",
-            "\t$0",
-            "@endif"
-        ],
-        "description": "Blade: form method field"
-    },
+  "auth": {
+    "prefix": "@ auth",
+    "body": ["@auth", "\t$0", "@endauth"],
+    "description": "Blade: auth"
+  },
 
-    "dump": {
-        "prefix": "@ dump",
-        "body": [
-            "@dump($0)"
-        ],
-        "description": "Blade: dump"
-    },
+  "guest": {
+    "prefix": "@ guest",
+    "body": ["@guest", "\t$0", "@endguest"],
+    "description": "Blade: guest"
+  },
 
-    /* Retrieving Translation Strings */
+  "switch": {
+    "prefix": "@ switch",
+    "body": [
+      "@switch(${1:\\$type})",
+      "\t@case(${2:1})",
+      "\t\t$3",
+      "\t\t@break",
+      "\t@case(${4:2})",
+      "\t\t$5",
+      "\t\t@break",
+      "\t@default",
+      "\t\t$0",
+      "@endswitch"
+    ],
+    "description": "Blade: switch"
+  },
 
-    "lang": {
-        "prefix": "@ lang",
-        "body": [
-            "@lang('${1:messages.welcome}')"
-        ],
-        "description": "Blade: lang"
-    }
+  "csrf": {
+    "prefix": "@ csrf",
+    "body": ["@csrf"],
+    "description": "Blade: form csrf field"
+  },
+
+  "method": {
+    "prefix": "@ method",
+    "body": ["@method('${1|get,post,put,patch,delete|}')"],
+    "description": "Blade: form method field"
+  },
+
+  "if is method": {
+    "prefix": "@ if is Method",
+    "body": ["@if (${1:request()}->isMethod('${2:post}'))", "\t$0", "@endif"],
+    "description": "Blade: form method field"
+  },
+
+  "dump": {
+    "prefix": "@ dump",
+    "body": ["@dump($0)"],
+    "description": "Blade: dump"
+  },
+
+  /* Retrieving Translation Strings */
+
+  "lang": {
+    "prefix": "@ lang",
+    "body": ["@lang('${1:messages.welcome}')"],
+    "description": "Blade: lang"
+  }
 }

@@ -1,126 +1,112 @@
 {
-    "Route Controller": {
-        "prefix": "Route Ctrl controller get|post|put|patch|delete|options",
-        "body": [
-            "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:${5|index,create,store,show,edit,update,destroy|}}');",
-            "$0"
-        ],
-        "description": "Laravel/route: Controller@action / respond to an HTTP verb (get, post, put, patch, delete, options)"
-    },
+  "Route Controller": {
+    "prefix": "Route Ctrl controller get|post|put|patch|delete|options",
+    "body": [
+      "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:${5|index,create,store,show,edit,update,destroy|}}');",
+      "$0"
+    ],
+    "description": "Laravel/route: Controller@action / respond to an HTTP verb (get, post, put, patch, delete, options)"
+  },
 
-    "Route Closure": {
-        "prefix": "Route Fn Function Route controller get|post|put|patch|delete|options",
-        "body": [
-            "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', function () {",
-            "\t$0",
-            "});"
-        ],
-        "description": "Laravel/route: Accepts a URI and a Closure. respond to an HTTP verb (get, post, put, patch, delete, options)"
-    },
-    
-    "Route single resource": {
-        "prefix": "Route Rsrc resource|apiResource",
-        "body": [
-            "Route::${1|resource,apiResource|}('$2', '$3Controller');",
-            "$0"
-        ],
-        "description": "Laravel/route(API): register a resourceful route or API route to a controller"
-    },
+  "Route Closure": {
+    "prefix": "Route Fn Function Route controller get|post|put|patch|delete|options",
+    "body": [
+      "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', function () {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Laravel/route: Accepts a URI and a Closure. respond to an HTTP verb (get, post, put, patch, delete, options)"
+  },
 
-    "Route single resource only": {
-        "prefix": [
-            "Route Rsrc Resource Only|Except"
-        ],
-        "body": [
-            "Route::resource('${1}', '${2}Controller')${3:->${4|only,except|}([",
-            "\t'${5:index}', '${6:show}'${7:, '${8:more}'}",
-            "])};",
-            "$0"
-        ],
-        "description": "Laravel/route(API): register partial resourceful routes/API-routes to a controller"
-    },
+  "Route single resource": {
+    "prefix": "Route Rsrc resource|apiResource",
+    "body": ["Route::${1|resource,apiResource|}('$2', '$3Controller');", "$0"],
+    "description": "Laravel/route(API): register a resourceful route or API route to a controller"
+  },
 
-    "Route multiple resources": {
-        "prefix": "Route Rsrcs resources",
-        "body": [
-            "Route::${1|resources,apiResources|}([",
-            "\t'$3' => '$4Controller'${5:,",
-            "\t'$6' => '$7Controller'}",
-            "]);",
-            "$0"
-        ],
-        "description": "Laravel/route: Register many resource controllers at once"
-    },
-    
-    "Route Match Controller": {
-        "prefix": "Route Match",
-        "body": [
-            "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', '${6}Controller@${7:index}');"
-        ],
-        "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
-    },
-    
-    "Route Match Closure": {
-        "prefix": "Route Mtch Fn Function",
-        "body": [
-            "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', function () {",
-            "\t$0",
-            "});"
-        ],
-        "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
-    },
-    
-    "Route Any Controller": {
-        "prefix": "Route Any",
-        "body": [
-            "Route::any('${1:/}', '${2}Controller@${3:index}');"
-        ],
-        "description": "Laravel/route: registers a route that respond to all HTTP verbs."
-    },
+  "Route single resource only": {
+    "prefix": ["Route Rsrc Resource Only|Except"],
+    "body": [
+      "Route::resource('${1}', '${2}Controller')${3:->${4|only,except|}([",
+      "\t'${5:index}', '${6:show}'${7:, '${8:more}'}",
+      "])};",
+      "$0"
+    ],
+    "description": "Laravel/route(API): register partial resourceful routes/API-routes to a controller"
+  },
 
-    "Route Any Closure": {
-        "prefix": "Route Any Fn Function",
-        "body": [
-            "Route::any('${1:/}', function () {",
-            "\t$0",
-            "});"
-        ],
-        "description": "Laravel/route: registers a route that respond to all HTTP verbs."
-    },
+  "Route multiple resources": {
+    "prefix": "Route Rsrcs resources",
+    "body": [
+      "Route::${1|resources,apiResources|}([",
+      "\t'$3' => '$4Controller'${5:,",
+      "\t'$6' => '$7Controller'}",
+      "]);",
+      "$0"
+    ],
+    "description": "Laravel/route: Register many resource controllers at once"
+  },
 
-    // Route Group
-    "Route Group": {
-        "prefix": "Route Group Namespace|Domain|Prefix|Name",
-        "body": [
-            "Route::${1:middleware(${2:['$3', '$4']})",
-            "\t->}${5:namespace('$6')",
-            "\t->}${7:domain('$8')",
-            "\t->}${9:prefix('$10')",
-            "\t->}${11:name('$12.')",
-            "\t->}group(function () {",
-            "\t\t$0",
-            "\t});"
-        ],
-        "descroption": "Laravel/route: Group routes by all or some of (namespace(), domain(), prefix(), name())."
-    },
+  "Route Match Controller": {
+    "prefix": "Route Match",
+    "body": [
+      "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', '${6}Controller@${7:index}');"
+    ],
+    "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
+  },
 
-    // redirects
-    "Route Redirect": {
-        "prefix": "Route Rdrct Redirect",
-        "body": [
-            "Route::${1|redirect,permanentRedirect|}('/${2:here}', '/${3:there}'${4:, '${5:302}'});",
-            "$0"
-        ],
-        "descroption": "Laravel/route: Redirect to another URI."
-    },
+  "Route Match Closure": {
+    "prefix": "Route Mtch Fn Function",
+    "body": [
+      "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', function () {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
+  },
 
-    // View Route
-    "View Route": {
-        "prefix": "Route View",
-        "body": [
-            "Route::view('/${1:welcome}', '${2:welcome}'${3:, [$4]});",
-            "$0"
-        ],
-        "descroption": "Laravel/route: If the route only needs to return a view."
-    }
+  "Route Any Controller": {
+    "prefix": "Route Any",
+    "body": ["Route::any('${1:/}', '${2}Controller@${3:index}');"],
+    "description": "Laravel/route: registers a route that respond to all HTTP verbs."
+  },
+
+  "Route Any Closure": {
+    "prefix": "Route Any Fn Function",
+    "body": ["Route::any('${1:/}', function () {", "\t$0", "});"],
+    "description": "Laravel/route: registers a route that respond to all HTTP verbs."
+  },
+
+  // Route Group
+  "Route Group": {
+    "prefix": "Route Group Namespace|Domain|Prefix|Name",
+    "body": [
+      "Route::${1:middleware(${2:['$3', '$4']})",
+      "\t->}${5:namespace('$6')",
+      "\t->}${7:domain('$8')",
+      "\t->}${9:prefix('$10')",
+      "\t->}${11:name('$12.')",
+      "\t->}group(function () {",
+      "\t\t$0",
+      "\t});"
+    ],
+    "descroption": "Laravel/route: Group routes by all or some of (namespace(), domain(), prefix(), name())."
+  },
+
+  // redirects
+  "Route Redirect": {
+    "prefix": "Route Rdrct Redirect",
+    "body": [
+      "Route::${1|redirect,permanentRedirect|}('/${2:here}', '/${3:there}'${4:, '${5:302}'});",
+      "$0"
+    ],
+    "descroption": "Laravel/route: Redirect to another URI."
+  },
+
+  // View Route
+  "View Route": {
+    "prefix": "Route View",
+    "body": ["Route::view('/${1:welcome}', '${2:welcome}'${3:, [$4]});", "$0"],
+    "descroption": "Laravel/route: If the route only needs to return a view."
+  }
 }
