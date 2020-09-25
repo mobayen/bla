@@ -15,7 +15,9 @@ The most important thing I have in mind is not adding extra string/characters to
 
 > yes: `@bla-bla`
 
-Just start type the actuall code (`@section`, `Route::get`, ...) the snippets show up.
+The snippets suppose to be triggered while you are typing.
+
+So, just start type the actual code (`@section`, `Route::get`, ...) the snippets show up.
 Easy, right?
 
 ### Blade snippets
@@ -74,7 +76,8 @@ In other word, in these (chained!) blocks, only the block-open and block-close c
 
 ## Snippets
 
-> Originaly the Blade snippets initialized with the "Laravel Blade Snippets" and then I modified them.
+> Originaly the Blade snippets initialized with the "Laravel Blade Snippets" 
+and then I am modifing them.
 
 - The list of trigger-snippet code will be added soon
 

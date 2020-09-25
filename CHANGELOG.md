@@ -63,3 +63,6 @@ To be added in the middle of other 'if' blocks
 - Adds two more snippets
   - @dd()
   - the combo of @extend and @section
+
+### 0.6.0
+- trigger the snippet with the actual code

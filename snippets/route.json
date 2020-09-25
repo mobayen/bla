@@ -1,6 +1,6 @@
 {
   "Route Controller": {
-    "prefix": "Route Ctrl controller get|post|put|patch|delete|options",
+    "prefix": "Route Ctrl controller Route::get|post|put|patch|delete|options",
     "body": [
       "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', '${3}Controller@${4:${5|index,create,store,show,edit,update,destroy|}}');",
       "$0"
@@ -9,7 +9,7 @@
   },
 
   "Route Closure": {
-    "prefix": "Route Fn Function Route controller get|post|put|patch|delete|options",
+    "prefix": "Route Fn Function Route::get|post|put|patch|delete|options",
     "body": [
       "Route::${1|get,post,put,patch,delete,options|}('${2:uri}', function () {",
       "\t$0",
@@ -19,13 +19,13 @@
   },
 
   "Route single resource": {
-    "prefix": "Route Rsrc resource|apiResource",
+    "prefix": "Route (api)Rsrc Route::resource|apiResource",
     "body": ["Route::${1|resource,apiResource|}('$2', '$3Controller');", "$0"],
     "description": "Laravel/route(API): register a resourceful route or API route to a controller"
   },
 
   "Route single resource only": {
-    "prefix": ["Route Rsrc Resource Only|Except"],
+    "prefix": ["Route Rsrc Only|Except Resource Route::resource"],
     "body": [
       "Route::resource('${1}', '${2}Controller')${3:->${4|only,except|}([",
       "\t'${5:index}', '${6:show}'${7:, '${8:more}'}",
@@ -36,7 +36,7 @@
   },
 
   "Route multiple resources": {
-    "prefix": "Route Rsrcs resources",
+    "prefix": "Route Rsrcs multiple resources Route::resources|apiResources",
     "body": [
       "Route::${1|resources,apiResources|}([",
       "\t'$3' => '$4Controller'${5:,",
@@ -48,15 +48,19 @@
   },
 
   "Route Match Controller": {
-    "prefix": "Route Match",
+    "prefix": "Route Match ctrl controller Route::match",
     "body": [
-      "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', '${6}Controller@${7:index}');"
+      "Route::match(",
+      "\t['${1:get}', '${2:post}'${3:, '$4'}],",
+      "\t'${5:/}',",
+      "\t'${6}Controller@${7:index}'",
+      ");"
     ],
     "description": "Laravel/route/match(): register a route that responds to multiple HTTP verbs."
   },
 
   "Route Match Closure": {
-    "prefix": "Route Mtch Fn Function",
+    "prefix": "Route Mtch Fn Function Route::match",
     "body": [
       "Route::match(['${1:get}', '${2:post}'${3:, '$4'}], '${5:/}', function () {",
       "\t$0",
@@ -66,20 +70,20 @@
   },
 
   "Route Any Controller": {
-    "prefix": "Route Any",
+    "prefix": "Route Any ctrl controller Route::any",
     "body": ["Route::any('${1:/}', '${2}Controller@${3:index}');"],
     "description": "Laravel/route: registers a route that respond to all HTTP verbs."
   },
 
   "Route Any Closure": {
-    "prefix": "Route Any Fn Function",
+    "prefix": "Route Any Fn Function Route::any",
     "body": ["Route::any('${1:/}', function () {", "\t$0", "});"],
     "description": "Laravel/route: registers a route that respond to all HTTP verbs."
   },
 
   // Route Group
   "Route Group": {
-    "prefix": "Route Group Namespace|Domain|Prefix|Name",
+    "prefix": "Route Group Route::Namespace|Domain|Prefix|Name",
     "body": [
       "Route::${1:middleware(${2:['$3', '$4']})",
       "\t->}${5:namespace('$6')",
@@ -95,7 +99,7 @@
 
   // redirects
   "Route Redirect": {
-    "prefix": "Route Rdrct Redirect",
+    "prefix": "Route Rdrct Redirect Route::redirect|permanentRedirect",
     "body": [
       "Route::${1|redirect,permanentRedirect|}('/${2:here}', '/${3:there}'${4:, '${5:302}'});",
       "$0"
@@ -105,7 +109,7 @@
 
   // View Route
   "View Route": {
-    "prefix": "Route View",
+    "prefix": "Route View Route::view",
     "body": ["Route::view('/${1:welcome}', '${2:welcome}'${3:, [$4]});", "$0"],
     "descroption": "Laravel/route: If the route only needs to return a view."
   }
