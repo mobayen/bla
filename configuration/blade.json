@@ -24,7 +24,8 @@
         ["@error", "@enderror"],
         ["@push", "@endpush"],
         ["@prepend", "@endprepend"],
-        ["@env", "@endenv"]
+        ["@env", "@endenv"],
+        ["@slot", "@endslot"]
     ],
 
     "autoCloseBefore": ";:.,=}])><` \n\t\"'",

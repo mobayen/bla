@@ -3,7 +3,7 @@
     "displayName": "bla_de: Laravel blade/route",
     "description": "bla_de is a Laravel blade and route VS Code extension",
     "publisher": "saintMiM",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "icon": "images/L-big.png",
     "repository": {
         "type": "git",

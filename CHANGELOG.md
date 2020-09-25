@@ -66,3 +66,6 @@ To be added in the middle of other 'if' blocks
 
 ### 0.6.0
 - trigger the snippet with the actual code
+
+### 0.7.0
+- Adds @slot @endslot as brackets
