@@ -20,12 +20,24 @@
         ["@section", "@show"],
         ["@section", "@endsection"],
         ["@hasSection", "@endif"],
+        ["@sectionMissing", "@endif"],
 
         ["@error", "@enderror"],
         ["@push", "@endpush"],
         ["@prepend", "@endprepend"],
         ["@env", "@endenv"],
-        ["@slot", "@endslot"]
+        ["@slot", "@endslot"],
+
+        ["@verbatim", "@endverbatim"],
+        ["@unless", "@endunless"],
+        ["@isset", "@endisset"],
+        ["@empty", "@endempty"],
+        ["@auth", "@endauth"],
+        ["@guest", "@endguest"],
+        ["@production", "@endproduction"],
+        ["@env", "@endenv"],
+        ["@php", "@endphp"],
+        ["@once", "@endonce"]
     ],
 
     "autoCloseBefore": ";:.,=}])><` \n\t\"'",
