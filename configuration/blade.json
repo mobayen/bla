@@ -27,6 +27,7 @@
         ["@prepend", "@endprepend"],
         ["@env", "@endenv"],
         ["@slot", "@endslot"],
+        ["@component", "@endcomponent"],
 
         ["@verbatim", "@endverbatim"],
         ["@unless", "@endunless"],
@@ -37,7 +38,10 @@
         ["@production", "@endproduction"],
         ["@env", "@endenv"],
         ["@php", "@endphp"],
-        ["@once", "@endonce"]
+        ["@once", "@endonce"],
+        
+        ["@can", "@endcan"],
+        ["@cannot", "@endcannot"]
     ],
 
     "autoCloseBefore": ";:.,=}])><` \n\t\"'",
