@@ -257,7 +257,7 @@
     "description": "Blade: if block checks it is the first or last"
   },
 
-  "php directive": {
+  "php directive - blade": {
     "prefix": "@ php",
     "body": ["@php", "$0", "@endphp"],
     "description": "Blade: @php block code in view."
